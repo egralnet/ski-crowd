@@ -1,0 +1,33 @@
+name: Generate crowd.json
+
+on:
+  schedule:
+    - cron: '0 3,9,15 * * *'  # 日本時間 12:00 / 18:00 / 翌日0:00
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: pip install --upgrade pip
+
+    - name: Run script
+      run: python generate_crowd_json.py
+
+    - name: Commit and push crowd.json
+      run: |
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add crowd.json
+        git commit -m "Update crowd.json" || echo "No changes to commit"
+        git push
