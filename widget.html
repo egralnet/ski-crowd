@@ -1,0 +1,46 @@
+<!-- Ski Crowd Heatbar Widget v1 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>スキー場混雑ヒートバー</title>
+  <style>
+    body { font-family: sans-serif; background: #f9f9f9; margin: 0; padding: 12px; }
+    .crowd-box { max-width: 700px; margin: auto; background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 0 6px rgba(0,0,0,0.1); }
+    .crowd-title { font-size: 1.2rem; margin-bottom: 10px; }
+    .crowd-row { display: flex; align-items: center; margin: 4px 0; font-size: 0.9rem; }
+    .crowd-name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .crowd-bar-wrap { width: 100px; display: flex; align-items: center; gap: 6px; }
+    .crowd-bar { height: 10px; border-radius: 4px; background: green; transition: width .3s; }
+    footer { font-size: 0.75rem; text-align: right; margin-top: 10px; color: #666; }
+  </style>
+</head>
+<body>
+<div class="crowd-box">
+  <div class="crowd-title">人気スキー場 混雑ヒートバー</div>
+  <div id="crowd-list">読み込み中...</div>
+  <footer>
+    提供：<a href="https://skiblog.net" target="_blank" rel="noopener">スキー場情報ブログ</a>
+  </footer>
+</div>
+<script>
+fetch('crowd.json')
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById('crowd-list');
+    list.innerHTML = '';
+    data.resorts.slice(0, 30).forEach(r => {
+      const wrap = document.createElement('div');
+      wrap.className = 'crowd-row';
+      const bar = `<div class="crowd-bar-wrap"><div class="crowd-bar" style="width:${r.crowd}%;background:hsl(${120 - r.crowd}, 80%, 50%)"></div><div style="font-size:0.75rem;">${r.crowd}%</div></div>`;
+      wrap.innerHTML = `<div class="crowd-name">${r.name}</div>${bar}`;
+      list.appendChild(wrap);
+    });
+  })
+  .catch(() => {
+    document.getElementById('crowd-list').textContent = 'データ取得失敗';
+  });
+</script>
+</body>
+</html>
