@@ -1,0 +1,28 @@
+import json
+from datetime import datetime
+
+# 仮の人気スキー場リスト（必要に応じて拡張）
+resorts = [
+    {"prefecture": "北海道", "name": "ニセコ グランヒラフ", "crowd": 0},
+    {"prefecture": "長野県", "name": "白馬八方尾根", "crowd": 0},
+    {"prefecture": "新潟県", "name": "GALA湯沢", "crowd": 0},
+    {"prefecture": "群馬県", "name": "丸沼高原", "crowd": 0},
+    {"prefecture": "福島県", "name": "グランデコ", "crowd": 0},
+    {"prefecture": "山形県", "name": "蔵王温泉", "crowd": 0},
+    {"prefecture": "兵庫県", "name": "ハチ高原", "crowd": 0},
+    {"prefecture": "岐阜県", "name": "高鷲スノーパーク", "crowd": 0},
+    {"prefecture": "宮崎県", "name": "五ヶ瀬ハイランド", "crowd": 0},
+    {"prefecture": "岩手県", "name": "安比高原", "crowd": 0}
+]
+
+# 今日の日時をISO8601形式で追加
+now = datetime.now().isoformat()
+
+output = {
+    "updated": now,
+    "resorts": resorts
+}
+
+# JSONとして保存
+with open("crowd.json", "w", encoding="utf-8") as f:
+    json.dump(output, f, ensure_ascii=False, indent=2)
