@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>スキー場マッチング（全国100件）</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 text-sm">
+  <div class="max-w-3xl mx-auto p-4 border rounded-lg shadow">
+    <h2 class="text-xl font-bold mb-4 text-center text-blue-700">スキー場マッチング（全国100件）</h2>
+
+    <div class="mb-4">
+      <label for="prefecture" class="block mb-1">都道府県を選択:</label>
+      <select id="prefecture" class="w-full p-2 border rounded">
+        <option value="">--選択してください--</option>
+        <option value="北海道">北海道</option><option value="青森県">青森県</option><option value="岩手県">岩手県</option><option value="宮城県">宮城県</option><option value="秋田県">秋田県</option><option value="山形県">山形県</option><option value="福島県">福島県</option><option value="栃木県">栃木県</option><option value="群馬県">群馬県</option><option value="新潟県">新潟県</option><option value="山梨県">山梨県</option><option value="長野県">長野県</option><option value="岐阜県">岐阜県</option><option value="静岡県">静岡県</option><option value="愛知県">愛知県</option><option value="三重県">三重県</option><option value="滋賀県">滋賀県</option><option value="京都府">京都府</option><option value="兵庫県">兵庫県</option><option value="鳥取県">鳥取県</option><option value="島根県">島根県</option><option value="岡山県">岡山県</option><option value="広島県">広島県</option><option value="山口県">山口県</option><option value="徳島県">徳島県</option><option value="香川県">香川県</option><option value="愛媛県">愛媛県</option><option value="高知県">高知県</option><option value="福岡県">福岡県</option><option value="佐賀県">佐賀県</option><option value="長崎県">長崎県</option><option value="熊本県">熊本県</option><option value="大分県">大分県</option><option value="宮崎県">宮崎県</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="sort" class="block mb-1">並び順を選択:</label>
+      <select id="sort" class="w-full p-2 border rounded">
+        <option value="recommend">おすすめ順（総合スコア）</option><option value="snow">積雪量順</option><option value="crowd">混雑が少ない順</option><option value="ticketPrice">リフト券が安い順</option><option value="hotelPrice">宿泊平均価格が安い順</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <p class="mb-2">条件を選択（複数可）:</p>
+      <div id="conditions" class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <label><input type="checkbox" value="パウダースノー" class="mr-1"> パウダースノー</label><label><input type="checkbox" value="ファミリー向け" class="mr-1"> ファミリー向け</label><label><input type="checkbox" value="初心者向け" class="mr-1"> 初心者向け</label><label><input type="checkbox" value="上級者向け" class="mr-1"> 上級者向け</label><label><input type="checkbox" value="ナイター営業" class="mr-1"> ナイター営業</label><label><input type="checkbox" value="スノーパーク" class="mr-1"> スノーパーク</label><label><input type="checkbox" value="温泉あり" class="mr-1"> 温泉あり</label><label><input type="checkbox" value="リフト券割引" class="mr-1"> リフト券割引</label><label><input type="checkbox" value="アクセス良好" class="mr-1"> アクセス良好</label><label><input type="checkbox" value="積雪量豊富" class="mr-1"> 積雪量豊富</label><label><input type="checkbox" value="景観が美しい" class="mr-1"> 景観が美しい</label><label><input type="checkbox" value="キッズパーク" class="mr-1"> キッズパーク</label><label><input type="checkbox" value="レンタル充実" class="mr-1"> レンタル充実</label><label><input type="checkbox" value="スクールあり" class="mr-1"> スクールあり</label><label><input type="checkbox" value="レストラン充実" class="mr-1"> レストラン充実</label><label><input type="checkbox" value="Wi-Fi完備" class="mr-1"> Wi-Fi完備</label><label><input type="checkbox" value="カード決済可" class="mr-1"> カード決済可</label><label><input type="checkbox" value="スキーイン・アウト" class="mr-1"> スキーイン・アウト</label><label><input type="checkbox" value="混雑少なめ" class="mr-1"> 混雑少なめ</label><label><input type="checkbox" value="イベント充実" class="mr-1"> イベント充実</label>
+      </div>
+    </div>
+
+    <div class="text-center mb-4">
+      <button onclick="filterSkiResorts()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">検索する</button>
+    </div>
+
+    <div id="result" class="space-y-4"></div>
+  </div>
+
+  <script>
+    const skiResorts = [
+  {
+    "id": 1,
+    "name": "ニセコユナイテッド",
+    "prefecture": "北海道",
+    "tags": [
+      "Wi-Fi完備",
+      "パウダースノー",
+      "混雑少なめ",
+      "スクールあり",
+      "上級者向け"
+    ],
+    "score": 73,
+    "crowd": 21,
+    "ticketPrice": 6000,
+    "hotelPrice": 10000,
+    "snowDepth": 104,
+    "imageUrl": "",
+    "description": "北海道の人気スキー場「ニセコユナイテッド」。"
+  },
+  {
+    "id": 2,
+    "name": "ルスツリゾート",
+    "prefecture": "北海道",
+    "tags": [
+      "混雑少なめ",
+      "景観が美しい",
+      "カード決済可",
+      "上級者向け",
+      "積雪量豊富",
+      "温泉あり",
+      "レストラン充実"
+    ],
+    "score": 89,
+    "crowd": 70,
+    "ticketPrice": 5000,
+    "hotelPrice": 12000,
+    "snowDepth": 186,
+    "imageUrl": "",
+    "description": "北海道の人気スキー場「ルスツリゾート」。"
+  },
+  {
+    "id": 3,
+    "name": "キロロリゾート",
+    "prefecture": "北海道",
+    "tags": [
+      "初心者向け",
+      "レストラン充実",
+      "積雪量豊富",
+      "レンタル充実",
+      "イベント充実",
+      "Wi-Fi完備"
+    ],
+    "score": 70,
+    "crowd": 14,
+    "ticketPrice": 6000,
+    "hotelPrice": 15000,
+    "snowDepth": 62,
+    "imageUrl": "",
+    "description": "北海道の人気スキー場「キロロリゾート」。"
+  },
+  {
+    "id": 4,
+    "name": "札幌国際スキー場",
+    "prefecture": "北海道",
+    "tags": [
+      "アクセス良好",
+      "キッズパーク",
+      "パウダースノー",
+      "イベント充実",
+      "ナイター営業"
+    ],
+    "score": 90,
+    "crowd": 52,
+    "ticketPrice": 4500,
+    "hotelPrice": 20000,
+    "snowDepth": 298,
+    "imageUrl": "",
+    "description": "北海道の人気スキー場「札幌国際スキー場」。"
+  },
+  {
+    "id": 5,
+    "name": "富良野スキー場",
+    "prefecture": "北海道",
+    "tags": [
+      "温泉あり",
+      "スノーパーク",
+      "キッズパーク",
+      "レンタル充実"
+    ],
+    "score": 89,
+    "crowd": 43,
+    "ticketPrice": 6000,
+    "hotelPrice": 10000,
+    "snowDepth": 240,
+    "imageUrl": "",
+    "description": "北海道の人気スキー場「富良野スキー場」。"
+  },
+  {
+    "id": 6,
+    "name": "トマムスキーリゾート",
+    "prefecture": "北海道",
+    "tags": [
+      "混雑少なめ",
+      "レストラン充実",
+      "積雪量豊富",
+      "温泉あり",
+      "ファミリー向け"
+    ],
+    "score": 83,
+    "crowd": 77,
+    "ticketPrice": 4500,
+    "hotelPrice": 12000,
+    "snowDepth": 162,
+    "imageUrl": "",
+    "description": "北海道の人気スキー場「トマムスキーリゾート」。"
+  },
+  {
+    "id": 7,
+    "name": "八甲田スキー場",
+    "prefecture": "青森県",
+    "tags": [
+      "ナイター営業",
+      "キッズパーク",
+      "積雪量豊富",
+      "アクセス良好",
+      "温泉あり",
+      "スノーパーク"
+    ],
+    "score": 72,
+    "crowd": 15,
+    "ticketPrice": 6000,
+    "hotelPrice": 18000,
+    "snowDepth": 286,
+    "imageUrl": "",
+    "description": "青森県の人気スキー場「八甲田スキー場」。"
+  },
+  {
+    "id": 8,
+    "name": "青森スプリングスキーリゾート",
+    "prefecture": "青森県",
+    "tags": [
+      "上級者向け",
+      "リフト券割引",
+      "スノーパーク",
+      "キッズパーク",
+      "パウダースノー",
+      "レストラン充実"
+    ],
+    "score": 92,
+    "crowd": 33,
+    "ticketPrice": 3000,
+    "hotelPrice": 20000,
+    "snowDepth": 74,
+    "imageUrl": "",
+    "description": "青森県の人気スキー場「青森スプリングスキーリゾート」。"
+  },
+  {
+    "id": 9,
+    "name": "安比高原スキー場",
+    "prefecture": "岩手県",
+    "tags": [
+      "アクセス良好",
+      "キッズパーク",
+      "イベント充実",
+      "温泉あり"
+    ],
+    "score": 95,
+    "crowd": 17,
+    "ticketPrice": 5000,
+    "hotelPrice": 15000,
+    "snowDepth": 65,
+    "imageUrl": "",
+    "description": "岩手県の人気スキー場「安比高原スキー場」。"
+  },
+  {
+    "id": 10,
+    "name": "雫石スキー場",
+    "prefecture": "岩手県",
+    "tags": [
+      "初心者向け",
+      "リフト券割引",
+      "上級者向け",
+      "スノーパーク",
+      "スキーイン・アウト",
+      "レンタル充実",
+      "レストラン充実"
+    ],
+    "score": 75,
+    "crowd": 33,
+    "ticketPrice": 3000,
+    "hotelPrice": 12000,
+    "snowDepth": 242,
+    "imageUrl": "",
+    "description": "岩手県の人気スキー場「雫石スキー場」。"
+  },
+  {
+    "id": 11,
+    "name": "蔵王えぼしリゾート",
+    "prefecture": "宮城県",
+    "tags": [
+      "Wi-Fi完備",
+      "景観が美しい",
+      "上級者向け",
+      "混雑少なめ",
+      "イベント充実"
+    ],
+    "score": 75,
+    "crowd": 16,
+    "ticketPrice": 4500,
+    "hotelPrice": 10000,
+    "snowDepth": 236,
+    "imageUrl": "",
+    "description": "宮城県の人気スキー場「蔵王えぼしリゾート」。"
+  },
+  {
+    "id": 12,
+    "name": "スプリングバレー泉高原",
+    "prefecture": "宮城県",
+    "tags": [
+      "アクセス良好",
+      "カード決済可",
+      "初心者向け",
+      "ナイター営業"
+    ],
+    "score": 99,
+    "crowd": 18,
+    "ticketPrice": 3000,
+    "hotelPrice": 20000,
+    "snowDepth": 165,
+    "imageUrl": "",
+    "description": "宮城県の人気スキー場「スプリングバレー泉高原」。"
+  },
+  {
+    "id": 13,
+    "name": "たざわ湖スキー場",
+    "prefecture": "秋田県",
+    "tags": [
+      "ファミリー向け",
+      "ナイター営業",
+      "レストラン充実",
+      "スクールあり",
+      "キッズパーク",
+      "初心者向け",
+      "景観が美しい"
+    ],
+    "score": 84,
+    "crowd": 35,
+    "ticketPrice": 3500,
+    "hotelPrice": 18000,
+    "snowDepth": 84,
+    "imageUrl": "",
+    "description": "秋田県の人気スキー場「たざわ湖スキー場」。"
+  },
+  {
+    "id": 14,
+    "name": "蔵王温泉スキー場",
+    "prefecture": "山形県",
+    "tags": [
+      "スキーイン・アウト",
+      "ファミリー向け",
+      "キッズパーク",
+      "イベント充実",
+      "リフト券割引",
+      "景観が美しい",
+      "初心者向け"
+    ],
+    "score": 85,
+    "crowd": 41,
+    "ticketPrice": 5500,
+    "hotelPrice": 15000,
+    "snowDepth": 293,
+    "imageUrl": "",
+    "description": "山形県の人気スキー場「蔵王温泉スキー場」。"
+  },
+  {
+    "id": 15,
+    "name": "天元台高原スキー場",
+    "prefecture": "山形県",
+    "tags": [
+      "スノーパーク",
+      "ファミリー向け",
+      "景観が美しい",
+      "キッズパーク"
+    ],
+    "score": 70,
+    "crowd": 28,
+    "ticketPrice": 5000,
+    "hotelPrice": 18000,
+    "snowDepth": 284,
+    "imageUrl": "",
+    "description": "山形県の人気スキー場「天元台高原スキー場」。"
+  },
+  {
+    "id": 16,
+    "name": "グランデコスノーリゾート",
+    "prefecture": "福島県",
+    "tags": [
+      "パウダースノー",
+      "スノーパーク",
+      "カード決済可",
+      "温泉あり",
+      "アクセス良好",
+      "積雪量豊富"
+    ],
+    "score": 92,
+    "crowd": 16,
+    "ticketPrice": 5000,
+    "hotelPrice": 12000,
+    "snowDepth": 61,
+    "imageUrl": "",
+    "description": "福島県の人気スキー場「グランデコスノーリゾート」。"
+  },
+  {
+    "id": 17,
+    "name": "星野リゾート アルツ磐梯",
+    "prefecture": "福島県",
+    "tags": [
+      "スクールあり",
+      "キッズパーク",
+      "Wi-Fi完備",
+      "積雪量豊富"
+    ],
+    "score": 84,
+    "crowd": 17,
+    "ticketPrice": 3000,
+    "hotelPrice": 18000,
+    "snowDepth": 81,
+    "imageUrl": "",
+    "description": "福島県の人気スキー場「星野リゾート アルツ磐梯」。"
+  },
+  {
+    "id": 18,
+    "name": "ハンターマウンテン塩原",
+    "prefecture": "栃木県",
+    "tags": [
+      "スクールあり",
+      "積雪量豊富",
+      "上級者向け",
+      "パウダースノー"
+    ],
+    "score": 72,
+    "crowd": 47,
+    "ticketPrice": 5500,
+    "hotelPrice": 15000,
+    "snowDepth": 211,
+    "imageUrl": "",
+    "description": "栃木県の人気スキー場「ハンターマウンテン塩原」。"
+  },
+  {
+    "id": 19,
+    "name": "草津温泉スキー場",
+    "prefecture": "群馬県",
+    "tags": [
+      "積雪量豊富",
+      "ナイター営業",
+      "Wi-Fi完備",
+      "景観が美しい",
+      "スノーパーク",
+      "スクールあり"
+    ],
+    "score": 91,
+    "crowd": 27,
+    "ticketPrice": 6000,
+    "hotelPrice": 12000,
+    "snowDepth": 203,
+    "imageUrl": "",
+    "description": "群馬県の人気スキー場「草津温泉スキー場」。"
+  },
+  {
+    "id": 20,
+    "name": "たんばらスキーパーク",
+    "prefecture": "群馬県",
+    "tags": [
+      "レストラン充実",
+      "レンタル充実",
+      "スキーイン・アウト",
+      "パウダースノー",
+      "スノーパーク"
+    ],
+    "score": 70,
+    "crowd": 13,
+    "ticketPrice": 4500,
+    "hotelPrice": 12000,
+    "snowDepth": 104,
+    "imageUrl": "",
+    "description": "群馬県の人気スキー場「たんばらスキーパーク」。"
+  },
+  {
+    "id": 21,
+    "name": "GALA湯沢スキー場",
+    "prefecture": "新潟県",
+    "tags": [
+      "上級者向け",
+      "ナイター営業",
+      "スキーイン・アウト",
+      "イベント充実",
+      "Wi-Fi完備"
+    ],
+    "score": 70,
+    "crowd": 42,
+    "ticketPrice": 6000,
+    "hotelPrice": 15000,
+    "snowDepth": 140,
+    "imageUrl": "",
+    "description": "新潟県の人気スキー場「GALA湯沢スキー場」。"
+  },
+  {
+    "id": 22,
+    "name": "苗場スキー場",
+    "prefecture": "新潟県",
+    "tags": [
+      "Wi-Fi完備",
+      "パウダースノー",
+      "レンタル充実",
+      "スノーパーク",
+      "上級者向け",
+      "アクセス良好"
+    ],
+    "score": 98,
+    "crowd": 71,
+    "ticketPrice": 3000,
+    "hotelPrice": 12000,
+    "snowDepth": 297,
+    "imageUrl": "",
+    "description": "新潟県の人気スキー場「苗場スキー場」。"
+  },
+  {
+    "id": 23,
+    "name": "かぐらスキー場",
+    "prefecture": "新潟県",
+    "tags": [
+      "混雑少なめ",
+      "イベント充実",
+      "スノーパーク",
+      "カード決済可"
+    ],
+    "score": 85,
+    "crowd": 52,
+    "ticketPrice": 3500,
+    "hotelPrice": 15000,
+    "snowDepth": 52,
+    "imageUrl": "",
+    "description": "新潟県の人気スキー場「かぐらスキー場」。"
+  },
+  {
+    "id": 24,
+    "name": "舞子スノーリゾート",
+    "prefecture": "新潟県",
+    "tags": [
+      "キッズパーク",
+      "カード決済可",
+      "スノーパーク",
+      "混雑少なめ",
+      "スキーイン・アウト"
+    ],
+    "score": 71,
+    "crowd": 76,
+    "ticketPrice": 5000,
+    "hotelPrice": 18000,
+    "snowDepth": 116,
+    "imageUrl": "",
+    "description": "新潟県の人気スキー場「舞子スノーリゾート」。"
+  },
+  {
+    "id": 25,
+    "name": "志賀高原スキー場",
+    "prefecture": "長野県",
+    "tags": [
+      "カード決済可",
+      "イベント充実",
+      "混雑少なめ",
+      "リフト券割引"
+    ],
+    "score": 87,
+    "crowd": 22,
+    "ticketPrice": 3500,
+    "hotelPrice": 10000,
+    "snowDepth": 187,
+    "imageUrl": "",
+    "description": "長野県の人気スキー場「志賀高原スキー場」。"
+  },
+  {
+    "id": 26,
+    "name": "白馬八方尾根スキー場",
+    "prefecture": "長野県",
+    "tags": [
+      "Wi-Fi完備",
+      "ファミリー向け",
+      "リフト券割引",
+      "ナイター営業",
+      "景観が美しい",
+      "カード決済可",
+      "パウダースノー"
+    ],
+    "score": 95,
+    "crowd": 22,
+    "ticketPrice": 6000,
+    "hotelPrice": 10000,
+    "snowDepth": 283,
+    "imageUrl": "",
+    "description": "長野県の人気スキー場「白馬八方尾根スキー場」。"
+  },
+  {
+    "id": 27,
+    "name": "野沢温泉スキー場",
+    "prefecture": "長野県",
+    "tags": [
+      "カード決済可",
+      "スクールあり",
+      "キッズパーク",
+      "レストラン充実",
+      "スキーイン・アウト",
+      "ファミリー向け"
+    ],
+    "score": 70,
+    "crowd": 18,
+    "ticketPrice": 4500,
+    "hotelPrice": 12000,
+    "snowDepth": 278,
+    "imageUrl": "",
+    "description": "長野県の人気スキー場「野沢温泉スキー場」。"
+  },
+  {
+    "id": 28,
+    "name": "白馬五竜＆Hakuba47",
+    "prefecture": "長野県",
+    "tags": [
+      "積雪量豊富",
+      "アクセス良好",
+      "スノーパーク",
+      "混雑少なめ",
+      "リフト券割引"
+    ],
+    "score": 73,
+    "crowd": 69,
+    "ticketPrice": 3500,
+    "hotelPrice": 15000,
+    "snowDepth": 269,
+    "imageUrl": "",
+    "description": "長野県の人気スキー場「白馬五竜＆Hakuba47」。"
+  },
+  {
+    "id": 29,
+    "name": "つがいけマウンテンリゾート",
+    "prefecture": "長野県",
+    "tags": [
+      "積雪量豊富",
+      "レストラン充実",
+      "温泉あり",
+      "ナイター営業",
+      "初心者向け"
+    ],
+    "score": 95,
+    "crowd": 23,
+    "ticketPrice": 4000,
+    "hotelPrice": 20000,
+    "snowDepth": 119,
+    "imageUrl": "",
+    "description": "長野県の人気スキー場「つがいけマウンテンリゾート」。"
+  },
+  {
+    "id": 30,
+    "name": "高鷲スノーパーク",
+    "prefecture": "岐阜県",
+    "tags": [
+      "ナイター営業",
+      "Wi-Fi完備",
+      "レストラン充実",
+      "イベント充実",
+      "景観が美しい"
+    ],
+    "score": 96,
+    "crowd": 68,
+    "ticketPrice": 3000,
+    "hotelPrice": 12000,
+    "snowDepth": 81,
+    "imageUrl": "",
+    "description": "岐阜県の人気スキー場「高鷲スノーパーク」。"
+  },
+  {
+    "id": 31,
+    "name": "ダイナランド",
+    "prefecture": "岐阜県",
+    "tags": [
+      "リフト券割引",
+      "スキーイン・アウト",
+      "スノーパーク",
+      "パウダースノー",
+      "レンタル充実"
+    ],
+    "score": 70,
+    "crowd": 74,
+    "ticketPrice": 4500,
+    "hotelPrice": 10000,
+    "snowDepth": 261,
+    "imageUrl": "",
+    "description": "岐阜県の人気スキー場「ダイナランド」。"
+  },
+  {
+    "id": 32,
+    "name": "ホワイトピアたかす",
+    "prefecture": "岐阜県",
+    "tags": [
+      "スノーパーク",
+      "スクールあり",
+      "混雑少なめ",
+      "カード決済可",
+      "初心者向け",
+      "ナイター営業"
+    ],
+    "score": 74,
+    "crowd": 11,
+    "ticketPrice": 3500,
+    "hotelPrice": 12000,
+    "snowDepth": 277,
+    "imageUrl": "",
+    "description": "岐阜県の人気スキー場「ホワイトピアたかす」。"
+  },
+  {
+    "id": 33,
+    "name": "カムイみさかスキー場",
+    "prefecture": "山梨県",
+    "tags": [
+      "積雪量豊富",
+      "リフト券割引",
+      "温泉あり",
+      "混雑少なめ",
+      "景観が美しい"
+    ],
+    "score": 95,
+    "crowd": 26,
+    "ticketPrice": 3500,
+    "hotelPrice": 10000,
+    "snowDepth": 297,
+    "imageUrl": "",
+    "description": "山梨県の人気スキー場「カムイみさかスキー場」。"
+  },
+  {
+    "id": 34,
+    "name": "スノータウンYeti",
+    "prefecture": "静岡県",
+    "tags": [
+      "初心者向け",
+      "上級者向け",
+      "ナイター営業",
+      "スクールあり",
+      "パウダースノー"
+    ],
+    "score": 71,
+    "crowd": 30,
+    "ticketPrice": 3000,
+    "hotelPrice": 10000,
+    "snowDepth": 177,
+    "imageUrl": "",
+    "description": "静岡県の人気スキー場「スノータウンYeti」。"
+  },
+  {
+    "id": 35,
+    "name": "茶臼山高原スキー場",
+    "prefecture": "愛知県",
+    "tags": [
+      "混雑少なめ",
+      "スノーパーク",
+      "上級者向け",
+      "レンタル充実"
+    ],
+    "score": 88,
+    "crowd": 72,
+    "ticketPrice": 4000,
+    "hotelPrice": 10000,
+    "snowDepth": 178,
+    "imageUrl": "",
+    "description": "愛知県の人気スキー場「茶臼山高原スキー場」。"
+  },
+  {
+    "id": 36,
+    "name": "御在所スキー場",
+    "prefecture": "三重県",
+    "tags": [
+      "スクールあり",
+      "イベント充実",
+      "温泉あり",
+      "レストラン充実"
+    ],
+    "score": 88,
+    "crowd": 76,
+    "ticketPrice": 6000,
+    "hotelPrice": 18000,
+    "snowDepth": 252,
+    "imageUrl": "",
+    "description": "三重県の人気スキー場「御在所スキー場」。"
+  },
+  {
+    "id": 37,
+    "name": "グランスノー奥伊吹",
+    "prefecture": "滋賀県",
+    "tags": [
+      "レンタル充実",
+      "リフト券割引",
+      "レストラン充実",
+      "ファミリー向け",
+      "温泉あり"
+    ],
+    "score": 90,
+    "crowd": 29,
+    "ticketPrice": 3500,
+    "hotelPrice": 10000,
+    "snowDepth": 51,
+    "imageUrl": "",
+    "description": "滋賀県の人気スキー場「グランスノー奥伊吹」。"
+  },
+  {
+    "id": 38,
+    "name": "スイス村スキー場",
+    "prefecture": "京都府",
+    "tags": [
+      "スキーイン・アウト",
+      "混雑少なめ",
+      "レンタル充実",
+      "パウダースノー",
+      "Wi-Fi完備"
+    ],
+    "score": 96,
+    "crowd": 43,
+    "ticketPrice": 4500,
+    "hotelPrice": 10000,
+    "snowDepth": 109,
+    "imageUrl": "",
+    "description": "京都府の人気スキー場「スイス村スキー場」。"
+  },
+  {
+    "id": 39,
+    "name": "ハチ高原スキー場",
+    "prefecture": "兵庫県",
+    "tags": [
+      "アクセス良好",
+      "キッズパーク",
+      "レンタル充実",
+      "スノーパーク",
+      "ナイター営業",
+      "スキーイン・アウト"
+    ],
+    "score": 95,
+    "crowd": 54,
+    "ticketPrice": 3500,
+    "hotelPrice": 15000,
+    "snowDepth": 123,
+    "imageUrl": "",
+    "description": "兵庫県の人気スキー場「ハチ高原スキー場」。"
+  },
+  {
+    "id": 40,
+    "name": "ハチ北高原スキー場",
+    "prefecture": "兵庫県",
+    "tags": [
+      "ナイター営業",
+      "積雪量豊富",
+      "温泉あり",
+      "イベント充実",
+      "カード決済可",
+      "アクセス良好"
+    ],
+    "score": 92,
+    "crowd": 69,
+    "ticketPrice": 4500,
+    "hotelPrice": 18000,
+    "snowDepth": 118,
+    "imageUrl": "",
+    "description": "兵庫県の人気スキー場「ハチ北高原スキー場」。"
+  },
+  {
+    "id": 41,
+    "name": "芸北国際スキー場",
+    "prefecture": "広島県",
+    "tags": [
+      "アクセス良好",
+      "スノーパーク",
+      "温泉あり",
+      "イベント充実",
+      "上級者向け"
+    ],
+    "score": 84,
+    "crowd": 67,
+    "ticketPrice": 6000,
+    "hotelPrice": 10000,
+    "snowDepth": 143,
+    "imageUrl": "",
+    "description": "広島県の人気スキー場「芸北国際スキー場」。"
+  },
+  {
+    "id": 42,
+    "name": "恐羅漢スノーパーク",
+    "prefecture": "広島県",
+    "tags": [
+      "温泉あり",
+      "アクセス良好",
+      "混雑少なめ",
+      "景観が美しい",
+      "レンタル充実"
+    ],
+    "score": 99,
+    "crowd": 21,
+    "ticketPrice": 5500,
+    "hotelPrice": 20000,
+    "snowDepth": 264,
+    "imageUrl": "",
+    "description": "広島県の人気スキー場「恐羅漢スノーパーク」。"
+  },
+  {
+    "id": 43,
+    "name": "だいせんホワイトリゾート",
+    "prefecture": "鳥取県",
+    "tags": [
+      "Wi-Fi完備",
+      "パウダースノー",
+      "リフト券割引",
+      "イベント充実",
+      "混雑少なめ",
+      "積雪量豊富"
+    ],
+    "score": 72,
+    "crowd": 18,
+    "ticketPrice": 5500,
+    "hotelPrice": 20000,
+    "snowDepth": 158,
+    "imageUrl": "",
+    "description": "鳥取県の人気スキー場「だいせんホワイトリゾート」。"
+  },
+  {
+    "id": 44,
+    "name": "瑞穂ハイランド（休業中）",
+    "prefecture": "島根県",
+    "tags": [
+      "キッズパーク",
+      "ファミリー向け",
+      "スクールあり",
+      "レストラン充実"
+    ],
+    "score": 97,
+    "crowd": 37,
+    "ticketPrice": 3500,
+    "hotelPrice": 15000,
+    "snowDepth": 154,
+    "imageUrl": "",
+    "description": "島根県の人気スキー場「瑞穂ハイランド（休業中）」。"
+  },
+  {
+    "id": 45,
+    "name": "恩原高原スキー場",
+    "prefecture": "岡山県",
+    "tags": [
+      "ナイター営業",
+      "上級者向け",
+      "景観が美しい",
+      "スクールあり",
+      "温泉あり",
+      "ファミリー向け"
+    ],
+    "score": 85,
+    "crowd": 41,
+    "ticketPrice": 5500,
+    "hotelPrice": 20000,
+    "snowDepth": 70,
+    "imageUrl": "",
+    "description": "岡山県の人気スキー場「恩原高原スキー場」。"
+  },
+  {
+    "id": 46,
+    "name": "十種ヶ峰スキー場",
+    "prefecture": "山口県",
+    "tags": [
+      "上級者向け",
+      "温泉あり",
+      "ナイター営業",
+      "積雪量豊富",
+      "スノーパーク"
+    ],
+    "score": 73,
+    "crowd": 74,
+    "ticketPrice": 3500,
+    "hotelPrice": 18000,
+    "snowDepth": 120,
+    "imageUrl": "",
+    "description": "山口県の人気スキー場「十種ヶ峰スキー場」。"
+  },
+  {
+    "id": 47,
+    "name": "井川スキー場腕山",
+    "prefecture": "徳島県",
+    "tags": [
+      "温泉あり",
+      "パウダースノー",
+      "アクセス良好",
+      "カード決済可"
+    ],
+    "score": 88,
+    "crowd": 79,
+    "ticketPrice": 3500,
+    "hotelPrice": 8000,
+    "snowDepth": 58,
+    "imageUrl": "",
+    "description": "徳島県の人気スキー場「井川スキー場腕山」。"
+  },
+  {
+    "id": 48,
+    "name": "雲辺寺スノーパーク",
+    "prefecture": "香川県",
+    "tags": [
+      "カード決済可",
+      "上級者向け",
+      "スノーパーク",
+      "Wi-Fi完備"
+    ],
+    "score": 89,
+    "crowd": 73,
+    "ticketPrice": 4500,
+    "hotelPrice": 12000,
+    "snowDepth": 199,
+    "imageUrl": "",
+    "description": "香川県の人気スキー場「雲辺寺スノーパーク」。"
+  },
+  {
+    "id": 49,
+    "name": "久万スキーランド",
+    "prefecture": "愛媛県",
+    "tags": [
+      "混雑少なめ",
+      "Wi-Fi完備",
+      "景観が美しい",
+      "スクールあり",
+      "カード決済可",
+      "イベント充実",
+      "レストラン充実"
+    ],
+    "score": 93,
+    "crowd": 20,
+    "ticketPrice": 3500,
+    "hotelPrice": 12000,
+    "snowDepth": 213,
+    "imageUrl": "",
+    "description": "愛媛県の人気スキー場「久万スキーランド」。"
+  },
+  {
+    "id": 50,
+    "name": "天狗高原スキー場",
+    "prefecture": "高知県",
+    "tags": [
+      "上級者向け",
+      "キッズパーク",
+      "レストラン充実",
+      "イベント充実"
+    ],
+    "score": 89,
+    "crowd": 39,
+    "ticketPrice": 3500,
+    "hotelPrice": 10000,
+    "snowDepth": 143,
+    "imageUrl": "",
+    "description": "高知県の人気スキー場「天狗高原スキー場」。"
+  },
+  {
+    "id": 51,
+    "name": "蛍の里スキー場",
+    "prefecture": "福岡県",
+    "tags": [
+      "スキーイン・アウト",
+      "積雪量豊富",
+      "カード決済可",
+      "混雑少なめ",
+      "スノーパーク",
+      "アクセス良好"
+    ],
+    "score": 89,
+    "crowd": 26,
+    "ticketPrice": 6000,
+    "hotelPrice": 20000,
+    "snowDepth": 131,
+    "imageUrl": "",
+    "description": "福岡県の人気スキー場「蛍の里スキー場」。"
+  },
+  {
+    "id": 52,
+    "name": "天山スキー場",
+    "prefecture": "佐賀県",
+    "tags": [
+      "ファミリー向け",
+      "レンタル充実",
+      "アクセス良好",
+      "キッズパーク"
+    ],
+    "score": 72,
+    "crowd": 57,
+    "ticketPrice": 4000,
+    "hotelPrice": 15000,
+    "snowDepth": 235,
+    "imageUrl": "",
+    "description": "佐賀県の人気スキー場「天山スキー場」。"
+  },
+  {
+    "id": 53,
+    "name": "五家原岳スキー場",
+    "prefecture": "長崎県",
+    "tags": [
+      "混雑少なめ",
+      "温泉あり",
+      "ファミリー向け",
+      "上級者向け",
+      "カード決済可",
+      "レストラン充実",
+      "パウダースノー"
+    ],
+    "score": 86,
+    "crowd": 77,
+    "ticketPrice": 4000,
+    "hotelPrice": 10000,
+    "snowDepth": 113,
+    "imageUrl": "",
+    "description": "長崎県の人気スキー場「五家原岳スキー場」。"
+  },
+  {
+    "id": 54,
+    "name": "五ヶ瀬ハイランドスキー場",
+    "prefecture": "熊本県",
+    "tags": [
+      "初心者向け",
+      "イベント充実",
+      "スキーイン・アウト",
+      "リフト券割引",
+      "カード決済可",
+      "レストラン充実"
+    ],
+    "score": 73,
+    "crowd": 57,
+    "ticketPrice": 6000,
+    "hotelPrice": 10000,
+    "snowDepth": 243,
+    "imageUrl": "",
+    "description": "熊本県の人気スキー場「五ヶ瀬ハイランドスキー場」。"
+  },
+  {
+    "id": 55,
+    "name": "九重森林公園スキー場",
+    "prefecture": "大分県",
+    "tags": [
+      "レンタル充実",
+      "ナイター営業",
+      "カード決済可",
+      "スノーパーク",
+      "ファミリー向け",
+      "イベント充実"
+    ],
+    "score": 86,
+    "crowd": 10,
+    "ticketPrice": 3000,
+    "hotelPrice": 8000,
+    "snowDepth": 118,
+    "imageUrl": "",
+    "description": "大分県の人気スキー場「九重森林公園スキー場」。"
+  },
+  {
+    "id": 56,
+    "name": "えびの高原スキー場",
+    "prefecture": "宮崎県",
+    "tags": [
+      "スノーパーク",
+      "混雑少なめ",
+      "初心者向け",
+      "ファミリー向け",
+      "スキーイン・アウト",
+      "スクールあり"
+    ],
+    "score": 84,
+    "crowd": 11,
+    "ticketPrice": 3000,
+    "hotelPrice": 12000,
+    "snowDepth": 167,
+    "imageUrl": "",
+    "description": "宮崎県の人気スキー場「えびの高原スキー場」。"
+  },
+  {
+    "id": 57,
+    "name": "野沢温泉スキー場",
+    "prefecture": "長野県",
+    "tags": [
+      "レンタル充実",
+      "混雑少なめ",
+      "スクールあり",
+      "アクセス良好",
+      "ナイター営業",
+      "積雪量豊富",
+      "カード決済可"
+    ],
+    "score": 78,
+    "crowd": 66,
+    "ticketPrice": 5000,
+    "hotelPrice": 8000,
+    "snowDepth": 226,
+    "imageUrl": "",
+    "description": "長野県の人気スキー場「野沢温泉スキー場」。"
+  },
+  {
+    "id": 58,
+    "name": "札幌国際スキー場",
+    "prefecture": "北海道",
+    "tags": [
+      "Wi-Fi完備",
+      "イベント充実",
+      "初心者向け",
+      "パウダースノー",
+      "キッズパーク",
+      "ナイター営業",
+      "カード決済可"
+    ],
+    "score": 85,
+    "crowd": 25,
+    "ticketPrice": 5500,
+    "hotelPrice": 15000,
+    "snowDepth": 149,
+    "imageUrl": "",
+    "description": "北海道の人気スキー場「札幌国際スキー場」。"
+  },
+  {
+    "id": 59,
+    "name": "天元台高原スキー場",
+    "prefecture": "山形県",
+    "tags": [
+      "イベント充実",
+      "積雪量豊富",
+      "ファミリー向け",
+      "ナイター営業",
+      "レストラン充実",
+      "景観が美しい",
+      "アクセス良好"
+    ],
+    "score": 91,
+    "crowd": 67,
+    "ticketPrice": 6000,
+    "hotelPrice": 20000,
+    "snowDepth": 168,
+    "imageUrl": "",
+    "description": "山形県の人気スキー場「天元台高原スキー場」。"
+  },
+  {
+    "id": 60,
+    "name": "スノータウンYeti",
+    "prefecture": "静岡県",
+    "tags": [
+      "スノーパーク",
+      "パウダースノー",
+      "上級者向け",
+      "初心者向け"
+    ],
+    "score": 83,
+    "crowd": 15,
+    "ticketPrice": 4500,
+    "hotelPrice": 8000,
+    "snowDepth": 186,
+    "imageUrl": "",
+    "description": "静岡県の人気スキー場「スノータウンYeti」。"
+  },
+  {
+    "id": 61,
+    "name": "草津温泉スキー場",
+    "prefecture": "群馬県",
+    "tags": [
+      "レストラン充実",
+      "スノーパーク",
+      "スクールあり",
+      "アクセス良好",
+      "カード決済可",
+      "リフト券割引"
+    ],
+    "score": 71,
+    "crowd": 32,
+    "ticketPrice": 6000,
+    "hotelPrice": 12000,
+    "snowDepth": 111,
+    "imageUrl": "",
+    "description": "群馬県の人気スキー場「草津温泉スキー場」。"
+  },
+  {
+    "id": 62,
+    "name": "蔵王えぼしリゾート",
+    "prefecture": "宮城県",
+    "tags": [
+      "ファミリー向け",
+      "スクールあり",
+      "景観が美しい",
+      "スノーパーク",
+      "Wi-Fi完備"
+    ],
+    "score": 80,
+    "crowd": 59,
+    "ticketPrice": 3500,
+    "hotelPrice": 20000,
+    "snowDepth": 118,
+    "imageUrl": "",
+    "description": "宮城県の人気スキー場「蔵王えぼしリゾート」。"
+  },
+  {
+    "id": 63,
+    "name": "九重森林公園スキー場",
+    "prefecture": "大分県",
+    "tags": [
+      "アクセス良好",
+      "上級者向け",
+      "ナイター営業",
+      "スキーイン・アウト",
+      "レストラン充実",
+      "イベント充実",
+      "パウダースノー"
+    ],
+    "score": 88,
+    "crowd": 48,
+    "ticketPrice": 3500,
+    "hotelPrice": 18000,
+    "snowDepth": 201,
+    "imageUrl": "",
+    "description": "大分県の人気スキー場「九重森林公園スキー場」。"
+  },
+  {
+    "id": 64,
+    "name": "恩原高原スキー場",
+    "prefecture": "岡山県",
+    "tags": [
+      "積雪量豊富",
+      "混雑少なめ",
+      "パウダースノー",
+      "ファミリー向け"
+    ],
+    "score": 88,
+    "crowd": 41,
+    "ticketPrice": 4500,
+    "hotelPrice": 8000,
+    "snowDepth": 137,
+    "imageUrl": "",
+    "description": "岡山県の人気スキー場「恩原高原スキー場」。"
+  },
+  {
+    "id": 65,
+    "name": "たんばらスキーパーク",
+    "prefecture": "群馬県",
+    "tags": [
+      "カード決済可",
+      "温泉あり",
+      "初心者向け",
+      "パウダースノー"
+    ],
+    "score": 99,
+    "crowd": 43,
+    "ticketPrice": 3000,
+    "hotelPrice": 8000,
+    "snowDepth": 205,
+    "imageUrl": "",
+    "description": "群馬県の人気スキー場「たんばらスキーパーク」。"
+  },
+  {
+    "id": 66,
+    "name": "グランデコスノーリゾート",
+    "prefecture": "福島県",
+    "tags": [
+      "上級者向け",
+      "リフト券割引",
+      "温泉あり",
+      "混雑少なめ",
+      "キッズパーク",
+      "レストラン充実"
+    ],
+    "score": 78,
+    "crowd": 57,
+    "ticketPrice": 3000,
+    "hotelPrice": 18000,
+    "snowDepth": 207,
+    "imageUrl": "",
+    "description": "福島県の人気スキー場「グランデコスノーリゾート」。"
+  },
+  {
+    "id": 67,
+    "name": "九重森林公園スキー場",
+    "prefecture": "大分県",
+    "tags": [
+      "景観が美しい",
+      "パウダースノー",
+      "レストラン充実",
+      "スクールあり",
+      "積雪量豊富"
+    ],
+    "score": 98,
+    "crowd": 76,
+    "ticketPrice": 4500,
+    "hotelPrice": 10000,
+    "snowDepth": 223,
+    "imageUrl": "",
+    "description": "大分県の人気スキー場「九重森林公園スキー場」。"
+  },
+  {
+    "id": 68,
+    "name": "天元台高原スキー場",
+    "prefecture": "山形県",
+    "tags": [
+      "積雪量豊富",
+      "上級者向け",
+      "ファミリー向け",
+      "スキーイン・アウト"
+    ],
+    "score": 99,
+    "crowd": 31,
+    "ticketPrice": 3000,
+    "hotelPrice": 8000,
+    "snowDepth": 196,
+    "imageUrl": "",
+    "description": "山形県の人気スキー場「天元台高原スキー場」。"
+  },
+  {
+    "id": 69,
+    "name": "安比高原スキー場",
+    "prefecture": "岩手県",
+    "tags": [
+      "ナイター営業",
+      "アクセス良好",
+      "混雑少なめ",
+      "キッズパーク"
+    ],
+    "score": 76,
+    "crowd": 29,
+    "ticketPrice": 4500,
+    "hotelPrice": 18000,
+    "snowDepth": 286,
+    "imageUrl": "",
+    "description": "岩手県の人気スキー場「安比高原スキー場」。"
+  },
+  {
+    "id": 70,
+    "name": "芸北国際スキー場",
+    "prefecture": "広島県",
+    "tags": [
+      "レストラン充実",
+      "カード決済可",
+      "リフト券割引",
+      "混雑少なめ",
+      "イベント充実",
+      "レンタル充実"
+    ],
+    "score": 84,
+    "crowd": 45,
+    "ticketPrice": 5500,
+    "hotelPrice": 20000,
+    "snowDepth": 217,
+    "imageUrl": "",
+    "description": "広島県の人気スキー場「芸北国際スキー場」。"
+  },
+  {
+    "id": 71,
+    "name": "野沢温泉スキー場",
+    "prefecture": "長野県",
+    "tags": [
+      "イベント充実",
+      "スキーイン・アウト",
+      "レストラン充実",
+      "上級者向け",
+      "混雑少なめ",
+      "ナイター営業"
+    ],
+    "score": 96,
+    "crowd": 77,
+    "ticketPrice": 4000,
+    "hotelPrice": 20000,
+    "snowDepth": 283,
+    "imageUrl": "",
+    "description": "長野県の人気スキー場「野沢温泉スキー場」。"
+  },
+  {
+    "id": 72,
+    "name": "九重森林公園スキー場",
+    "prefecture": "大分県",
+    "tags": [
+      "スノーパーク",
+      "積雪量豊富",
+      "レンタル充実",
+      "アクセス良好"
+    ],
+    "score": 87,
+    "crowd": 54,
+    "ticketPrice": 3500,
+    "hotelPrice": 8000,
+    "snowDepth": 174,
+    "imageUrl": "",
+    "description": "大分県の人気スキー場「九重森林公園スキー場」。"
+  },
+  {
+    "id": 73,
+    "name": "高鷲スノーパーク",
+    "prefecture": "岐阜県",
+    "tags": [
+      "スノーパーク",
+      "ファミリー向け",
+      "カード決済可",
+      "イベント充実"
+    ],
+    "score": 97,
+    "crowd": 40,
+    "ticketPrice": 5500,
+    "hotelPrice": 20000,
+    "snowDepth": 186,
+    "imageUrl": "",
+    "description": "岐阜県の人気スキー場「高鷲スノーパーク」。"
+  },
+  {
+    "id": 74,
+    "name": "御在所スキー場",
+    "prefecture": "三重県",
+    "tags": [
+      "レンタル充実",
+      "キッズパーク",
+      "スクールあり",
+      "景観が美しい",
+      "レストラン充実",
+      "混雑少なめ",
+      "Wi-Fi完備"
+    ],
+    "score": 98,
+    "crowd": 74,
+    "ticketPrice": 4500,
+    "hotelPrice": 12000,
+    "snowDepth": 117,
+    "imageUrl": "",
+    "description": "三重県の人気スキー場「御在所スキー場」。"
+  },
+  {
+    "id": 75,
+    "name": "ホワイトピアたかす",
+    "prefecture": "岐阜県",
+    "tags": [
+      "キッズパーク",
+      "レストラン充実",
+      "カード決済可",
+      "スノーパーク",
+      "上級者向け",
+      "アクセス良好"
+    ],
+    "score": 73,
+    "crowd": 64,
+    "ticketPrice": 3000,
+    "hotelPrice": 10000,
+    "snowDepth": 128,
+    "imageUrl": "",
+    "description": "岐阜県の人気スキー場「ホワイトピアたかす」。"
+  },
+  {
+    "id": 76,
+    "name": "芸北国際スキー場",
+    "prefecture": "広島県",
+    "tags": [
+      "キッズパーク",
+      "スキーイン・アウト",
+      "混雑少なめ",
+      "カード決済可",
+      "アクセス良好"
+    ],
+    "score": 79,
+    "crowd": 78,
+    "ticketPrice": 4000,
+    "hotelPrice": 8000,
+    "snowDepth": 184,
+    "imageUrl": "",
+    "description": "広島県の人気スキー場「芸北国際スキー場」。"
+  },
+  {
+    "id": 77,
+    "name": "天狗高原スキー場",
+    "prefecture": "高知県",
+    "tags": [
+      "スキーイン・アウト",
+      "リフト券割引",
+      "Wi-Fi完備",
+      "積雪量豊富",
+      "温泉あり",
+      "アクセス良好"
+    ],
+    "score": 73,
+    "crowd": 38,
+    "ticketPrice": 5500,
+    "hotelPrice": 18000,
+    "snowDepth": 220,
+    "imageUrl": "",
+    "description": "高知県の人気スキー場「天狗高原スキー場」。"
+  },
+  {
+    "id": 78,
+    "name": "五家原岳スキー場",
+    "prefecture": "長崎県",
+    "tags": [
+      "レストラン充実",
+      "温泉あり",
+      "リフト券割引",
+      "レンタル充実",
+      "ナイター営業"
+    ],
+    "score": 80,
+    "crowd": 27,
+    "ticketPrice": 5500,
+    "hotelPrice": 18000,
+    "snowDepth": 207,
+    "imageUrl": "",
+    "description": "長崎県の人気スキー場「五家原岳スキー場」。"
+  },
+  {
+    "id": 79,
+    "name": "天狗高原スキー場",
+    "prefecture": "高知県",
+    "tags": [
+      "レストラン充実",
+      "上級者向け",
+      "スキーイン・アウト",
+      "リフト券割引",
+      "景観が美しい"
+    ],
+    "score": 78,
+    "crowd": 53,
+    "ticketPrice": 5000,
+    "hotelPrice": 15000,
+    "snowDepth": 237,
+    "imageUrl": "",
+    "description": "高知県の人気スキー場「天狗高原スキー場」。"
+  },
+  {
+    "id": 80,
+    "name": "御在所スキー場",
+    "prefecture": "三重県",
+    "tags": [
+      "景観が美しい",
+      "温泉あり",
+      "混雑少なめ",
+      "ファミリー向け",
+      "Wi-Fi完備",
+      "積雪量豊富"
+    ],
+    "score": 84,
+    "crowd": 26,
+    "ticketPrice": 3500,
+    "hotelPrice": 12000,
+    "snowDepth": 245,
+    "imageUrl": "",
+    "description": "三重県の人気スキー場「御在所スキー場」。"
+  },
+  {
+    "id": 81,
+    "name": "十種ヶ峰スキー場",
+    "prefecture": "山口県",
+    "tags": [
+      "上級者向け",
+      "レンタル充実",
+      "ナイター営業",
+      "積雪量豊富",
+      "リフト券割引",
+      "カード決済可",
+      "温泉あり"
+    ],
+    "score": 74,
+    "crowd": 50,
+    "ticketPrice": 3000,
+    "hotelPrice": 12000,
+    "snowDepth": 199,
+    "imageUrl": "",
+    "description": "山口県の人気スキー場「十種ヶ峰スキー場」。"
+  },
+  {
+    "id": 82,
+    "name": "だいせんホワイトリゾート",
+    "prefecture": "鳥取県",
+    "tags": [
+      "積雪量豊富",
+      "温泉あり",
+      "上級者向け",
+      "パウダースノー",
+      "イベント充実",
+      "スキーイン・アウト",
+      "混雑少なめ"
+    ],
+    "score": 92,
+    "crowd": 58,
+    "ticketPrice": 6000,
+    "hotelPrice": 20000,
+    "snowDepth": 183,
+    "imageUrl": "",
+    "description": "鳥取県の人気スキー場「だいせんホワイトリゾート」。"
+  },
+  {
+    "id": 83,
+    "name": "札幌国際スキー場",
+    "prefecture": "北海道",
+    "tags": [
+      "リフト券割引",
+      "初心者向け",
+      "景観が美しい",
+      "混雑少なめ",
+      "温泉あり"
+    ],
+    "score": 75,
+    "crowd": 41,
+    "ticketPrice": 4500,
+    "hotelPrice": 10000,
+    "snowDepth": 141,
+    "imageUrl": "",
+    "description": "北海道の人気スキー場「札幌国際スキー場」。"
+  },
+  {
+    "id": 84,
+    "name": "御在所スキー場",
+    "prefecture": "三重県",
+    "tags": [
+      "混雑少なめ",
+      "カード決済可",
+      "Wi-Fi完備",
+      "スノーパーク",
+      "景観が美しい",
+      "イベント充実",
+      "レンタル充実"
+    ],
+    "score": 84,
+    "crowd": 52,
+    "ticketPrice": 3500,
+    "hotelPrice": 8000,
+    "snowDepth": 272,
+    "imageUrl": "",
+    "description": "三重県の人気スキー場「御在所スキー場」。"
+  },
+  {
+    "id": 85,
+    "name": "五家原岳スキー場",
+    "prefecture": "長崎県",
+    "tags": [
+      "混雑少なめ",
+      "レストラン充実",
+      "スノーパーク",
+      "ファミリー向け",
+      "アクセス良好"
+    ],
+    "score": 95,
+    "crowd": 41,
+    "ticketPrice": 3000,
+    "hotelPrice": 15000,
+    "snowDepth": 64,
+    "imageUrl": "",
+    "description": "長崎県の人気スキー場「五家原岳スキー場」。"
+  },
+  {
+    "id": 86,
+    "name": "恐羅漢スノーパーク",
+    "prefecture": "広島県",
+    "tags": [
+      "アクセス良好",
+      "景観が美しい",
+      "レンタル充実",
+      "ナイター営業",
+      "ファミリー向け",
+      "キッズパーク",
+      "スキーイン・アウト"
+    ],
+    "score": 70,
+    "crowd": 29,
+    "ticketPrice": 4000,
+    "hotelPrice": 18000,
+    "snowDepth": 232,
+    "imageUrl": "",
+    "description": "広島県の人気スキー場「恐羅漢スノーパーク」。"
+  },
+  {
+    "id": 87,
+    "name": "たんばらスキーパーク",
+    "prefecture": "群馬県",
+    "tags": [
+      "スキーイン・アウト",
+      "積雪量豊富",
+      "ファミリー向け",
+      "ナイター営業"
+    ],
+    "score": 79,
+    "crowd": 46,
+    "ticketPrice": 3000,
+    "hotelPrice": 12000,
+    "snowDepth": 50,
+    "imageUrl": "",
+    "description": "群馬県の人気スキー場「たんばらスキーパーク」。"
+  },
+  {
+    "id": 88,
+    "name": "だいせんホワイトリゾート",
+    "prefecture": "鳥取県",
+    "tags": [
+      "混雑少なめ",
+      "景観が美しい",
+      "積雪量豊富",
+      "Wi-Fi完備",
+      "スクールあり",
+      "ナイター営業",
+      "スノーパーク"
+    ],
+    "score": 84,
+    "crowd": 65,
+    "ticketPrice": 4500,
+    "hotelPrice": 10000,
+    "snowDepth": 90,
+    "imageUrl": "",
+    "description": "鳥取県の人気スキー場「だいせんホワイトリゾート」。"
+  },
+  {
+    "id": 89,
+    "name": "たんばらスキーパーク",
+    "prefecture": "群馬県",
+    "tags": [
+      "混雑少なめ",
+      "スクールあり",
+      "アクセス良好",
+      "上級者向け",
+      "レストラン充実"
+    ],
+    "score": 86,
+    "crowd": 24,
+    "ticketPrice": 3500,
+    "hotelPrice": 18000,
+    "snowDepth": 233,
+    "imageUrl": "",
+    "description": "群馬県の人気スキー場「たんばらスキーパーク」。"
+  },
+  {
+    "id": 90,
+    "name": "五ヶ瀬ハイランドスキー場",
+    "prefecture": "熊本県",
+    "tags": [
+      "パウダースノー",
+      "ファミリー向け",
+      "イベント充実",
+      "温泉あり",
+      "レンタル充実"
+    ],
+    "score": 99,
+    "crowd": 24,
+    "ticketPrice": 5500,
+    "hotelPrice": 15000,
+    "snowDepth": 121,
+    "imageUrl": "",
+    "description": "熊本県の人気スキー場「五ヶ瀬ハイランドスキー場」。"
+  },
+  {
+    "id": 91,
+    "name": "だいせんホワイトリゾート",
+    "prefecture": "鳥取県",
+    "tags": [
+      "イベント充実",
+      "スクールあり",
+      "初心者向け",
+      "景観が美しい"
+    ],
+    "score": 77,
+    "crowd": 65,
+    "ticketPrice": 3500,
+    "hotelPrice": 20000,
+    "snowDepth": 226,
+    "imageUrl": "",
+    "description": "鳥取県の人気スキー場「だいせんホワイトリゾート」。"
+  },
+  {
+    "id": 92,
+    "name": "草津温泉スキー場",
+    "prefecture": "群馬県",
+    "tags": [
+      "レンタル充実",
+      "Wi-Fi完備",
+      "上級者向け",
+      "景観が美しい"
+    ],
+    "score": 91,
+    "crowd": 77,
+    "ticketPrice": 3500,
+    "hotelPrice": 15000,
+    "snowDepth": 89,
+    "imageUrl": "",
+    "description": "群馬県の人気スキー場「草津温泉スキー場」。"
+  },
+  {
+    "id": 93,
+    "name": "かぐらスキー場",
+    "prefecture": "新潟県",
+    "tags": [
+      "パウダースノー",
+      "スキーイン・アウト",
+      "レストラン充実",
+      "レンタル充実",
+      "混雑少なめ",
+      "温泉あり",
+      "上級者向け"
+    ],
+    "score": 78,
+    "crowd": 50,
+    "ticketPrice": 5500,
+    "hotelPrice": 20000,
+    "snowDepth": 274,
+    "imageUrl": "",
+    "description": "新潟県の人気スキー場「かぐらスキー場」。"
+  },
+  {
+    "id": 94,
+    "name": "たんばらスキーパーク",
+    "prefecture": "群馬県",
+    "tags": [
+      "Wi-Fi完備",
+      "リフト券割引",
+      "スクールあり",
+      "温泉あり",
+      "ファミリー向け"
+    ],
+    "score": 91,
+    "crowd": 25,
+    "ticketPrice": 5500,
+    "hotelPrice": 8000,
+    "snowDepth": 221,
+    "imageUrl": "",
+    "description": "群馬県の人気スキー場「たんばらスキーパーク」。"
+  },
+  {
+    "id": 95,
+    "name": "高鷲スノーパーク",
+    "prefecture": "岐阜県",
+    "tags": [
+      "パウダースノー",
+      "カード決済可",
+      "スクールあり",
+      "温泉あり"
+    ],
+    "score": 86,
+    "crowd": 42,
+    "ticketPrice": 4000,
+    "hotelPrice": 8000,
+    "snowDepth": 145,
+    "imageUrl": "",
+    "description": "岐阜県の人気スキー場「高鷲スノーパーク」。"
+  },
+  {
+    "id": 96,
+    "name": "蔵王えぼしリゾート",
+    "prefecture": "宮城県",
+    "tags": [
+      "上級者向け",
+      "スノーパーク",
+      "ファミリー向け",
+      "ナイター営業",
+      "イベント充実",
+      "パウダースノー",
+      "カード決済可"
+    ],
+    "score": 91,
+    "crowd": 31,
+    "ticketPrice": 3000,
+    "hotelPrice": 10000,
+    "snowDepth": 289,
+    "imageUrl": "",
+    "description": "宮城県の人気スキー場「蔵王えぼしリゾート」。"
+  },
+  {
+    "id": 97,
+    "name": "恩原高原スキー場",
+    "prefecture": "岡山県",
+    "tags": [
+      "イベント充実",
+      "Wi-Fi完備",
+      "レストラン充実",
+      "スキーイン・アウト",
+      "キッズパーク"
+    ],
+    "score": 88,
+    "crowd": 42,
+    "ticketPrice": 5500,
+    "hotelPrice": 18000,
+    "snowDepth": 70,
+    "imageUrl": "",
+    "description": "岡山県の人気スキー場「恩原高原スキー場」。"
+  },
+  {
+    "id": 98,
+    "name": "だいせんホワイトリゾート",
+    "prefecture": "鳥取県",
+    "tags": [
+      "Wi-Fi完備",
+      "スクールあり",
+      "ファミリー向け",
+      "景観が美しい",
+      "混雑少なめ",
+      "温泉あり"
+    ],
+    "score": 81,
+    "crowd": 79,
+    "ticketPrice": 4000,
+    "hotelPrice": 8000,
+    "snowDepth": 155,
+    "imageUrl": "",
+    "description": "鳥取県の人気スキー場「だいせんホワイトリゾート」。"
+  },
+  {
+    "id": 99,
+    "name": "ダイナランド",
+    "prefecture": "岐阜県",
+    "tags": [
+      "レンタル充実",
+      "スキーイン・アウト",
+      "初心者向け",
+      "混雑少なめ",
+      "リフト券割引"
+    ],
+    "score": 78,
+    "crowd": 55,
+    "ticketPrice": 4500,
+    "hotelPrice": 18000,
+    "snowDepth": 280,
+    "imageUrl": "",
+    "description": "岐阜県の人気スキー場「ダイナランド」。"
+  },
+  {
+    "id": 100,
+    "name": "つがいけマウンテンリゾート",
+    "prefecture": "長野県",
+    "tags": [
+      "レストラン充実",
+      "温泉あり",
+      "ナイター営業",
+      "Wi-Fi完備",
+      "景観が美しい"
+    ],
+    "score": 87,
+    "crowd": 11,
+    "ticketPrice": 4000,
+    "hotelPrice": 12000,
+    "snowDepth": 112,
+    "imageUrl": "",
+    "description": "長野県の人気スキー場「つがいけマウンテンリゾート」。"
+  }
+];
+
+    function filterSkiResorts() {
+      const pref = document.getElementById("prefecture").value;
+      const sortKey = document.getElementById("sort").value;
+      const checked = Array.from(document.querySelectorAll('#conditions input:checked')).map(cb => cb.value);
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = "";
+
+      let results = skiResorts.filter(r => {
+        const matchPref = pref ? r.prefecture === pref : true;
+        const matchTags = checked.every(tag => r.tags.includes(tag));
+        return matchPref && matchTags;
+      });
+
+      // ソート処理
+      if (sortKey === "recommend") {
+        results.sort((a, b) => b.score - a.score);
+      } else if (sortKey === "snow") {
+        results.sort((a, b) => b.snowDepth - a.snowDepth);
+      } else if (sortKey === "crowd") {
+        results.sort((a, b) => a.crowd - b.crowd);
+      } else if (sortKey === "ticketPrice") {
+        results.sort((a, b) => a.ticketPrice - b.ticketPrice);
+      } else if (sortKey === "hotelPrice") {
+        results.sort((a, b) => a.hotelPrice - b.hotelPrice);
+      }
+
+      if (results.length === 0) {
+        resultDiv.innerHTML = '<p class="text-center text-gray-500">条件に合致するスキー場は見つかりませんでした。</p>';
+        return;
+      }
+
+      results.forEach(r => {
+        const tags = r.tags.map(t => `<span class='bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full text-xs mr-1'>${t}</span>`).join("");
+        resultDiv.innerHTML += `
+          <div class='border rounded p-3'>
+            <div class='font-bold text-base mb-1'>${r.name} <span class='text-sm text-gray-500'>(${r.prefecture})</span></div>
+            <div class='text-sm mb-1'>${r.description}</div>
+            <div class='mb-1'>${tags}</div>
+            <div class='text-xs text-gray-600'>混雑度: ${r.crowd}% | 積雪量: ${r.snowDepth} cm | リフト券: ¥${r.ticketPrice} | 宿泊: ¥${r.hotelPrice}</div>
+            <div class='text-xs text-gray-600'>おすすめスコア: ${r.score}点</div>
+          </div>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>
