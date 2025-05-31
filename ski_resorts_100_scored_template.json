@@ -1,0 +1,2352 @@
+[
+  {
+    "id": 1,
+    "name": "北海道スキー場1",
+    "prefecture": "北海道",
+    "tags": [
+      "ファミリー向け"
+    ],
+    "description": "北海道にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 2,
+    "name": "青森県スキー場2",
+    "prefecture": "青森県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け"
+    ],
+    "description": "青森県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 3,
+    "name": "岩手県スキー場3",
+    "prefecture": "岩手県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー"
+    ],
+    "description": "岩手県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 4,
+    "name": "宮城県スキー場4",
+    "prefecture": "宮城県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり"
+    ],
+    "description": "宮城県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 5,
+    "name": "秋田県スキー場5",
+    "prefecture": "秋田県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり"
+    ],
+    "description": "秋田県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 6,
+    "name": "山形県スキー場6",
+    "prefecture": "山形県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン"
+    ],
+    "description": "山形県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 7,
+    "name": "福島県スキー場7",
+    "prefecture": "福島県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター"
+    ],
+    "description": "福島県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 8,
+    "name": "茨城県スキー場8",
+    "prefecture": "茨城県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク"
+    ],
+    "description": "茨城県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 9,
+    "name": "栃木県スキー場9",
+    "prefecture": "栃木県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり"
+    ],
+    "description": "栃木県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 10,
+    "name": "群馬県スキー場10",
+    "prefecture": "群馬県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり",
+      "空いている"
+    ],
+    "description": "群馬県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 11,
+    "name": "埼玉県スキー場11",
+    "prefecture": "埼玉県",
+    "tags": [
+      "ファミリー向け"
+    ],
+    "description": "埼玉県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 12,
+    "name": "千葉県スキー場12",
+    "prefecture": "千葉県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け"
+    ],
+    "description": "千葉県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 13,
+    "name": "東京都スキー場13",
+    "prefecture": "東京都",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー"
+    ],
+    "description": "東京都にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 14,
+    "name": "神奈川県スキー場14",
+    "prefecture": "神奈川県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり"
+    ],
+    "description": "神奈川県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 15,
+    "name": "新潟県スキー場15",
+    "prefecture": "新潟県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり"
+    ],
+    "description": "新潟県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 16,
+    "name": "富山県スキー場16",
+    "prefecture": "富山県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン"
+    ],
+    "description": "富山県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 17,
+    "name": "石川県スキー場17",
+    "prefecture": "石川県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター"
+    ],
+    "description": "石川県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 18,
+    "name": "福井県スキー場18",
+    "prefecture": "福井県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク"
+    ],
+    "description": "福井県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 19,
+    "name": "山梨県スキー場19",
+    "prefecture": "山梨県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり"
+    ],
+    "description": "山梨県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 20,
+    "name": "長野県スキー場20",
+    "prefecture": "長野県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり",
+      "空いている"
+    ],
+    "description": "長野県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 21,
+    "name": "岐阜県スキー場21",
+    "prefecture": "岐阜県",
+    "tags": [
+      "ファミリー向け"
+    ],
+    "description": "岐阜県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 22,
+    "name": "静岡県スキー場22",
+    "prefecture": "静岡県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け"
+    ],
+    "description": "静岡県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 23,
+    "name": "愛知県スキー場23",
+    "prefecture": "愛知県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー"
+    ],
+    "description": "愛知県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 24,
+    "name": "三重県スキー場24",
+    "prefecture": "三重県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり"
+    ],
+    "description": "三重県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 25,
+    "name": "滋賀県スキー場25",
+    "prefecture": "滋賀県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり"
+    ],
+    "description": "滋賀県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 26,
+    "name": "京都府スキー場26",
+    "prefecture": "京都府",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン"
+    ],
+    "description": "京都府にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 27,
+    "name": "大阪府スキー場27",
+    "prefecture": "大阪府",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター"
+    ],
+    "description": "大阪府にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 28,
+    "name": "兵庫県スキー場28",
+    "prefecture": "兵庫県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク"
+    ],
+    "description": "兵庫県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 29,
+    "name": "奈良県スキー場29",
+    "prefecture": "奈良県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり"
+    ],
+    "description": "奈良県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 30,
+    "name": "和歌山県スキー場30",
+    "prefecture": "和歌山県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり",
+      "空いている"
+    ],
+    "description": "和歌山県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 31,
+    "name": "鳥取県スキー場31",
+    "prefecture": "鳥取県",
+    "tags": [
+      "ファミリー向け"
+    ],
+    "description": "鳥取県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 32,
+    "name": "島根県スキー場32",
+    "prefecture": "島根県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け"
+    ],
+    "description": "島根県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 33,
+    "name": "岡山県スキー場33",
+    "prefecture": "岡山県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー"
+    ],
+    "description": "岡山県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 34,
+    "name": "広島県スキー場34",
+    "prefecture": "広島県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり"
+    ],
+    "description": "広島県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 35,
+    "name": "山口県スキー場35",
+    "prefecture": "山口県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり"
+    ],
+    "description": "山口県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 36,
+    "name": "徳島県スキー場36",
+    "prefecture": "徳島県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン"
+    ],
+    "description": "徳島県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 37,
+    "name": "香川県スキー場37",
+    "prefecture": "香川県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター"
+    ],
+    "description": "香川県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 38,
+    "name": "愛媛県スキー場38",
+    "prefecture": "愛媛県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク"
+    ],
+    "description": "愛媛県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 39,
+    "name": "高知県スキー場39",
+    "prefecture": "高知県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり"
+    ],
+    "description": "高知県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 40,
+    "name": "福岡県スキー場40",
+    "prefecture": "福岡県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり",
+      "空いている"
+    ],
+    "description": "福岡県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 41,
+    "name": "佐賀県スキー場41",
+    "prefecture": "佐賀県",
+    "tags": [
+      "ファミリー向け"
+    ],
+    "description": "佐賀県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 42,
+    "name": "長崎県スキー場42",
+    "prefecture": "長崎県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け"
+    ],
+    "description": "長崎県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 43,
+    "name": "熊本県スキー場43",
+    "prefecture": "熊本県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー"
+    ],
+    "description": "熊本県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 44,
+    "name": "大分県スキー場44",
+    "prefecture": "大分県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり"
+    ],
+    "description": "大分県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 45,
+    "name": "宮崎県スキー場45",
+    "prefecture": "宮崎県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり"
+    ],
+    "description": "宮崎県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 46,
+    "name": "北海道スキー場46",
+    "prefecture": "北海道",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン"
+    ],
+    "description": "北海道にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 47,
+    "name": "青森県スキー場47",
+    "prefecture": "青森県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター"
+    ],
+    "description": "青森県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 48,
+    "name": "岩手県スキー場48",
+    "prefecture": "岩手県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク"
+    ],
+    "description": "岩手県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 49,
+    "name": "宮城県スキー場49",
+    "prefecture": "宮城県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり"
+    ],
+    "description": "宮城県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 50,
+    "name": "秋田県スキー場50",
+    "prefecture": "秋田県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり",
+      "空いている"
+    ],
+    "description": "秋田県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 51,
+    "name": "山形県スキー場51",
+    "prefecture": "山形県",
+    "tags": [
+      "ファミリー向け"
+    ],
+    "description": "山形県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 52,
+    "name": "福島県スキー場52",
+    "prefecture": "福島県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け"
+    ],
+    "description": "福島県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 53,
+    "name": "茨城県スキー場53",
+    "prefecture": "茨城県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー"
+    ],
+    "description": "茨城県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 54,
+    "name": "栃木県スキー場54",
+    "prefecture": "栃木県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり"
+    ],
+    "description": "栃木県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 55,
+    "name": "群馬県スキー場55",
+    "prefecture": "群馬県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり"
+    ],
+    "description": "群馬県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 56,
+    "name": "埼玉県スキー場56",
+    "prefecture": "埼玉県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン"
+    ],
+    "description": "埼玉県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 57,
+    "name": "千葉県スキー場57",
+    "prefecture": "千葉県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター"
+    ],
+    "description": "千葉県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 58,
+    "name": "東京都スキー場58",
+    "prefecture": "東京都",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク"
+    ],
+    "description": "東京都にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 59,
+    "name": "神奈川県スキー場59",
+    "prefecture": "神奈川県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり"
+    ],
+    "description": "神奈川県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 60,
+    "name": "新潟県スキー場60",
+    "prefecture": "新潟県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり",
+      "空いている"
+    ],
+    "description": "新潟県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 61,
+    "name": "富山県スキー場61",
+    "prefecture": "富山県",
+    "tags": [
+      "ファミリー向け"
+    ],
+    "description": "富山県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 62,
+    "name": "石川県スキー場62",
+    "prefecture": "石川県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け"
+    ],
+    "description": "石川県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 63,
+    "name": "福井県スキー場63",
+    "prefecture": "福井県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー"
+    ],
+    "description": "福井県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 64,
+    "name": "山梨県スキー場64",
+    "prefecture": "山梨県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり"
+    ],
+    "description": "山梨県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 65,
+    "name": "長野県スキー場65",
+    "prefecture": "長野県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり"
+    ],
+    "description": "長野県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 66,
+    "name": "岐阜県スキー場66",
+    "prefecture": "岐阜県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン"
+    ],
+    "description": "岐阜県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 67,
+    "name": "静岡県スキー場67",
+    "prefecture": "静岡県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター"
+    ],
+    "description": "静岡県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 68,
+    "name": "愛知県スキー場68",
+    "prefecture": "愛知県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク"
+    ],
+    "description": "愛知県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 69,
+    "name": "三重県スキー場69",
+    "prefecture": "三重県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり"
+    ],
+    "description": "三重県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 70,
+    "name": "滋賀県スキー場70",
+    "prefecture": "滋賀県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり",
+      "空いている"
+    ],
+    "description": "滋賀県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 71,
+    "name": "京都府スキー場71",
+    "prefecture": "京都府",
+    "tags": [
+      "ファミリー向け"
+    ],
+    "description": "京都府にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 72,
+    "name": "大阪府スキー場72",
+    "prefecture": "大阪府",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け"
+    ],
+    "description": "大阪府にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 73,
+    "name": "兵庫県スキー場73",
+    "prefecture": "兵庫県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー"
+    ],
+    "description": "兵庫県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 74,
+    "name": "奈良県スキー場74",
+    "prefecture": "奈良県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり"
+    ],
+    "description": "奈良県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 75,
+    "name": "和歌山県スキー場75",
+    "prefecture": "和歌山県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり"
+    ],
+    "description": "和歌山県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 76,
+    "name": "鳥取県スキー場76",
+    "prefecture": "鳥取県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン"
+    ],
+    "description": "鳥取県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 77,
+    "name": "島根県スキー場77",
+    "prefecture": "島根県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター"
+    ],
+    "description": "島根県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 78,
+    "name": "岡山県スキー場78",
+    "prefecture": "岡山県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク"
+    ],
+    "description": "岡山県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 79,
+    "name": "広島県スキー場79",
+    "prefecture": "広島県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり"
+    ],
+    "description": "広島県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 80,
+    "name": "山口県スキー場80",
+    "prefecture": "山口県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり",
+      "空いている"
+    ],
+    "description": "山口県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 81,
+    "name": "徳島県スキー場81",
+    "prefecture": "徳島県",
+    "tags": [
+      "ファミリー向け"
+    ],
+    "description": "徳島県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 82,
+    "name": "香川県スキー場82",
+    "prefecture": "香川県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け"
+    ],
+    "description": "香川県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 83,
+    "name": "愛媛県スキー場83",
+    "prefecture": "愛媛県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー"
+    ],
+    "description": "愛媛県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 84,
+    "name": "高知県スキー場84",
+    "prefecture": "高知県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり"
+    ],
+    "description": "高知県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 85,
+    "name": "福岡県スキー場85",
+    "prefecture": "福岡県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり"
+    ],
+    "description": "福岡県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 86,
+    "name": "佐賀県スキー場86",
+    "prefecture": "佐賀県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン"
+    ],
+    "description": "佐賀県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 87,
+    "name": "長崎県スキー場87",
+    "prefecture": "長崎県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター"
+    ],
+    "description": "長崎県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 88,
+    "name": "熊本県スキー場88",
+    "prefecture": "熊本県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク"
+    ],
+    "description": "熊本県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 89,
+    "name": "大分県スキー場89",
+    "prefecture": "大分県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり"
+    ],
+    "description": "大分県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 90,
+    "name": "宮崎県スキー場90",
+    "prefecture": "宮崎県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり",
+      "空いている"
+    ],
+    "description": "宮崎県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 91,
+    "name": "北海道スキー場91",
+    "prefecture": "北海道",
+    "tags": [
+      "ファミリー向け"
+    ],
+    "description": "北海道にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 92,
+    "name": "青森県スキー場92",
+    "prefecture": "青森県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け"
+    ],
+    "description": "青森県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 93,
+    "name": "岩手県スキー場93",
+    "prefecture": "岩手県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー"
+    ],
+    "description": "岩手県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 94,
+    "name": "宮城県スキー場94",
+    "prefecture": "宮城県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり"
+    ],
+    "description": "宮城県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 95,
+    "name": "秋田県スキー場95",
+    "prefecture": "秋田県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり"
+    ],
+    "description": "秋田県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 96,
+    "name": "山形県スキー場96",
+    "prefecture": "山形県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン"
+    ],
+    "description": "山形県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 97,
+    "name": "福島県スキー場97",
+    "prefecture": "福島県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター"
+    ],
+    "description": "福島県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 98,
+    "name": "茨城県スキー場98",
+    "prefecture": "茨城県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク"
+    ],
+    "description": "茨城県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 99,
+    "name": "栃木県スキー場99",
+    "prefecture": "栃木県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり"
+    ],
+    "description": "栃木県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  },
+  {
+    "id": 100,
+    "name": "群馬県スキー場100",
+    "prefecture": "群馬県",
+    "tags": [
+      "ファミリー向け",
+      "初心者向け",
+      "パウダー",
+      "スクールあり",
+      "Wi-Fiあり",
+      "レストラン",
+      "ナイター",
+      "スノーパーク",
+      "温泉あり",
+      "空いている"
+    ],
+    "description": "群馬県にある人気スキー場（仮）。",
+    "url": "",
+    "score": {
+      "snow": 0,
+      "crowd": 0,
+      "beginner": 0,
+      "cost": 0,
+      "food": 0,
+      "hotel": 0
+    },
+    "total": 0
+  }
+]
