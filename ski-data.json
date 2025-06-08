@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ニセコ グラン・ヒラフ",
+    "snow": 80,
+    "crowd": 30,
+    "food": 70,
+    "score": 90,
+    "hotel_link": "https://skiblog.net/skiarea/#i-3"
+  },
+  {
+    "name": "白馬八方尾根スキー場",
+    "snow": 75,
+    "crowd": 45,
+    "food": 65,
+    "score": 85,
+    "hotel_link": "https://skiblog.net/skiarea/#i-3"
+  },
+  {
+    "name": "苗場スキー場",
+    "snow": 65,
+    "crowd": 25,
+    "food": 60,
+    "score": 82,
+    "hotel_link": "https://skiblog.net/skiarea/#i-3"
+  }
+]
