@@ -1,4 +1,6 @@
-fetch("https://egralnet.github.io/ski-crowdn/ski-data.json")
+fetch("https://raw.githubusercontent.com/egralnet/ski-crowd/main/ski-data.json")
+
+
   .then((res) => res.json())
   .then((skiData) => {
     const container = document.getElementById("ski-search-results");
