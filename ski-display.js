@@ -1,4 +1,5 @@
-fetch("https://raw.githubusercontent.com/egralnet/ski-crowd/main/ski-data.json")
+fetch("https://skiblog.net/wp-json/ski/v1/data")
+
 
 
   .then((res) => res.json())
